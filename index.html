@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Competency 5</title>
+</head>
+<body>
+    <header>
+        <h1>Cool Company</h1>
+    </header>
+
+    <main>
+        <div class="flex_container"> <!-- changed this to a div based off website checklist, wanted section inside since that contains the header -->
+            <section class="flex_container start_trial"> <!-- Added flex here for content centering -->
+                <h1>Start Your Free Trial</h1>
+                <p>Get all the functionality. No strings attached.</p>
+            </section> 
+            <form action="#">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="user_name" placeholder="first and last name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="user_email">
+
+                <label for="discovery_method">How did you hear about us?</label>
+                <select name="discovery_method" id="discovery_method">
+                    <option disabled hidden selected>Select One</option>
+                    <option value="friend_or_colleague">Friend or Colleague</option>
+                    <option value="google">Google</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="comments">Comments</label>
+                <textarea name="user_comments" id="comments">Please write some stuff here</textarea>
+
+                <input type="submit" value="Submit" id="button">
+            </form> 
+        </div>
+        
+
+        <div class="flex_container colored_boxes"> <!-- colored boxes, flexbox time -->
+            <section id="marketing">
+                <h3>MARKETING</h3>
+
+                <p>With our email marketing software, you can easily design custom email, set up automated design campaigns, and see how your marketing efforts affect your 
+                    bottom line.</p>
+            </section>
+            <section id="sites">
+                <h3>SITES</h3>
+
+                <p>Easily sell online and ship orders to customers, offer curbside pickup, or local delivery-no matter what type of instagram, Facebook, and more.</p>
+            </section>
+            <section id="protection">
+                <h3>PROTECTION</h3>
+
+                <p>With end-to-end encryption, customer payment data never touches your servers or devices. Our secure online payment system offers 24/7 processing 
+                    protection.</p>
+            </section>
+            <section id="capital">
+                <h3>CAPITAL</h3>
+
+                <p>Our loans are tailored to your unique business. We’ll offer as much as we believe will help you move forward-not hold you back. 
+                    And you can use the money on anything for your business.</p>
+            </section>
+        </div> 
+    </main>
+
+    <footer class="flex_container">
+        <a href="#">Privacy Notice</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Licenses</a>
+        <a href="#">Government</a>
+    </footer>
+</body>
+</html>

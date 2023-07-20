@@ -1,0 +1,158 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  /* Resets are just fantastic y'know? */
+
+body {
+    margin: 8% 0 0 0; /* remove natural margin that comes from certain elements as well as set top spacing since header is fixed and out of doc flow */
+}
+
+@media only screen and (max-width: 815px) {
+    body {
+        margin: 14% 0 0 0; /* needed the query for the mobile version to scale properly */
+    }
+  }
+
+header {
+    background-color: white;
+    border-bottom: .2rem solid gold;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    /* fixed makes it so that the header stays on top of the viewport, left and right stretch it out, top makes it stick no matter what */
+}
+
+header h1 {
+    font-family: 'Sansita Swashed', cursive, Arial;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    /* wasn't a fan of the default 21.44px margin */
+}
+
+main, footer {
+    font-family: 'Rubik', sans-serif, Arial;
+    margin: 0 2%;
+    /* apply the font type to all things outside of header and create a "margin container" for main and footer */
+}
+
+.flex_container {
+    display: flex;
+    /* generic class to apply flexbox when needed */
+}
+
+.start_trial {
+    flex-direction: column; /* vertical instead of horizontal, this makes the paragraph stack */
+    justify-content: center; /* center content, scales as needed */
+    width: 50%; /* 50% of the parent container, form will take up the other 50% */
+}
+
+.start_trial h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    padding: 0 2%; /* This is what makes the bold text wrap to mirror the example at 1390px */
+}
+
+.start_trial p {
+    color: grey;
+    font-size: 1.2rem;
+    margin-top: 0;
+    padding-left: 2%;
+}
+
+form {
+    background-color: lightgray;
+    padding: 2rem;
+    width: 50%;
+}
+
+input, textarea, label, select {
+    display: block;
+}
+
+label {
+    font-weight: 300;
+    margin-top: 1.5rem;
+}
+
+input, textarea, select {
+    border: 1px solid black;
+    width: 100%;
+    padding: .5rem .3rem;
+}
+
+input {
+    font-size: 1rem;
+}
+
+#button {
+    background-color: green;
+    border-style: none; /* gets rid of 2 px border */
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    padding: .8rem 0;
+    text-transform: uppercase;
+    transition-duration: 1s; /* just to make it look smoother when coming out of hover */
+}
+
+#button:hover {
+    background-color: lightseagreen;
+    transition-duration: 1s;
+}
+
+.colored_boxes {
+    color: white;
+    margin-top: 3.5rem;
+}
+
+#marketing, #sites, #protection, #capital {
+    padding: .5% 1.5% 2% 1.5%; /* Little spacing for the text, h3 already has some natural margin so I didn't need to add to that */
+    transition-duration: .5s;
+    width: 25%;
+    /* natural spacing from header to paragraphs also took care of spacing so no need to specify more margin there, less code = better */
+}
+
+#marketing:hover, #sites:hover, #protection:hover, #capital:hover {
+    transform: translateY(-20px);
+    transition-duration: .5s; 
+}
+
+#capital {
+    background-color: lightblue;
+}
+
+#marketing {
+    background-color: red;
+}
+
+#sites {
+    background-color: purple;
+}
+
+#protection {
+    background-color: orange;
+}
+
+
+footer {
+    border-top: 2px solid lightgray;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: rgb(72, 198, 240);
+    padding: 1% 0;
+    text-decoration: none;
+}
